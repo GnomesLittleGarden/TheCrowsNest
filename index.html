@@ -23,19 +23,92 @@ footer{padding:32px 6vw;display:flex;justify-content:space-between;gap:16px;flex
 .modal{display:none;position:fixed;inset:0;z-index:20;background:#050604eF;overflow:auto;padding:4vh 14px;backdrop-filter:blur(8px)}.modal.open{display:block}.dialog{position:relative;width:min(900px,100%);margin:0 auto;background:#171a14;border:1px solid #505543;padding:25px;box-shadow:0 30px 90px #000b}.dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;border-bottom:1px solid #3b3e32;padding-bottom:18px;margin-bottom:18px}.dialog-head h2{font:800 42px/.9 var(--display);margin:6px 0;text-transform:uppercase}.close{color:#bcb6a6}.help{background:#26291f;border-left:3px solid var(--moss);padding:12px 14px;color:#c3beaE;font-size:11px;margin:12px 0 18px}.login-box{max-width:430px;margin:30px auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-grid label{display:flex;flex-direction:column;gap:6px;color:#b7b19f;font:8px var(--mono);letter-spacing:1px;text-transform:uppercase}.form-grid input,.form-grid textarea,.form-grid select{width:100%;background:#10120e;border:1px solid #444839;color:var(--paper);padding:11px;font:12px var(--type);border-radius:0}.form-grid textarea{min-height:95px;resize:vertical}.form-grid input[type=checkbox]{width:auto;accent-color:var(--moss)}.wide{grid-column:1/-1}.checkrow{display:flex!important;flex-direction:row!important;align-items:center;gap:9px!important}.admin-tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid #3b3e32;padding-bottom:14px;margin-bottom:17px}.admin-tabs button.active{color:var(--moss);border-color:var(--moss)}.admin-pane{display:none}.admin-pane.active{display:block}.admin-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}.admin-list{border-top:1px solid #3b3e32;max-height:460px;overflow:auto}.admin-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #34372e;font-size:11px}.admin-row small{display:block;color:#989585;font:8px var(--mono);margin-top:3px}.row-actions{display:flex;gap:5px}.row-actions button{padding:7px 8px;font-size:8px}.danger{color:#d78f80;border-color:#704a42}.state{font:9px var(--mono);color:#aebd8b}.statusline{margin:10px 0 16px;color:#9b9989;font:9px var(--mono)}.statusline.good{color:var(--moss)}.statusline.bad{color:#df927e}.toast{display:none;position:fixed;bottom:18px;right:18px;z-index:40;background:var(--moss);color:#11150e;padding:12px 16px;font:10px var(--mono);box-shadow:0 9px 25px #0009}.detail-body{color:#c7c2b4;white-space:pre-wrap;font-size:13px}.detail-body img{max-width:100%;max-height:420px;display:block;margin:18px auto}.detail-body iframe{width:100%;aspect-ratio:16/9;border:0;margin:15px 0}
 @media(max-width:850px){.topnav{gap:12px}.topnav a{font-size:8px}.hero-side{right:0;opacity:.75}.cards,.video-grid{grid-template-columns:repeat(2,1fr)}.notes-layout,.underground-grid{grid-template-columns:1fr;gap:35px}.underground-art{min-height:190px}.mushroom-cluster{font-size:74px}.orbit{width:200px;height:200px}.admin-layout{grid-template-columns:1fr}}
 @media(max-width:600px){.topbar{padding:12px 5vw}.topnav{display:none}.brand{font-size:22px}.wrap{width:90vw}.hero{min-height:620px}.hero-inner{padding:85px 0 120px}.hero h1{font-size:clamp(67px,19vw,105px)}.hero-side{right:1%;bottom:60px;opacity:.38}.hero-foot{left:5vw;right:5vw}.hero-foot span:nth-child(2){display:none}.section{padding:65px 0}.section-head{display:block}.subcopy{margin-top:14px}.cards,.video-grid{grid-template-columns:1fr}.stats{gap:10px}.stat strong{font-size:39px}.note-card{grid-template-columns:78px 1fr}.channel-panel{grid-template-columns:1fr}.channel-mark{display:none}.dialog{padding:17px}.dialog-head h2{font-size:34px}.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.about-strip{display:block}.about-strip span{display:block;margin:7px 0}}
+
+/* photocopied grow-room zine treatment */
+:root{--ink:#171610;--paper:#e3dcc7;--paper-dim:#bdb49c;--moss:#a7a45e;--moss-dark:#4c4d2e;--plum:#a887a9;--plum-dark:#4c394c;--rust:#d27954;--line:#514b3c;--panel:#d8cfb7;--panel2:#c9c0a8;--mono:'DM Mono',monospace;--display:'Special Elite',serif;--type:'DM Sans',sans-serif;--typewriter:'Special Elite',serif}
+body{background-color:#191812;background-image:repeating-linear-gradient(0deg,#ffffff03 0 1px,transparent 1px 5px),radial-gradient(ellipse at 11% 16%,#7b70401b 0,transparent 25%),radial-gradient(ellipse at 90% 60%,#6f4c7316 0,transparent 30%);font-size:15px}
+body:before{opacity:.13}
+.topbar{background:#171610;border-bottom:2px solid #7f765d;backdrop-filter:none;box-shadow:0 4px 0 #0d0d0b}
+.brand{font-family:var(--typewriter);font-size:24px;letter-spacing:-1px}.brand-mark{border:2px solid var(--rust);border-radius:0;transform:rotate(-8deg);font-family:var(--display)}
+.topnav{font-size:9px;letter-spacing:0;text-transform:uppercase}.topnav a{transform:rotate(-2deg);display:inline-block}
+button,.btn{border:2px solid currentColor;box-shadow:3px 3px 0 #0009;letter-spacing:0;font-weight:600}
+button:hover,.btn:hover{transform:translate(-1px,-1px) rotate(-1deg);box-shadow:5px 5px 0 #0008}
+.admin-open{border-color:var(--rust);color:#e6a080;transform:rotate(1deg)}
+.eyebrow{font-family:var(--typewriter);font-size:11px;letter-spacing:1px;color:#c6c06f;text-transform:none}
+.hero{min-height:660px;overflow:hidden;border-bottom:3px solid #696047;background:#1a1912}
+.hero:after{right:0;top:50px;width:46vw;height:46vw;border:4px dashed #b0a66c28;border-radius:46% 54% 51% 49%;box-shadow:12px 12px 0 #a887a90b,0 0 0 0 transparent;transform:rotate(13deg)}
+.hero-inner{padding:93px 0 120px;max-width:1180px}
+.hero-kicker{font-family:var(--typewriter);font-size:13px;letter-spacing:0;text-transform:none}.dot{border-radius:0;transform:rotate(45deg);box-shadow:none}
+.hero h1{font-family:var(--typewriter);font-weight:400;line-height:.92;letter-spacing:-4px;text-shadow:4px 4px 0 #000;transform:rotate(-1.2deg);max-width:900px}
+.hero h1 .moss{color:#b8b86e}.hero h1 .plum{font-family:var(--typewriter);font-size:.62em;letter-spacing:-3px;color:#c095b9;text-decoration:underline;text-decoration-style:wavy;text-decoration-thickness:2px;text-underline-offset:7px}
+.hero-copy{font-family:var(--typewriter);font-size:16px;line-height:1.75;color:#d0c8b2;max-width:540px}
+.hero-side{transform:rotate(11deg);right:5%;bottom:100px}.mushroom-sketch{font-size:76px;filter:grayscale(.25)}
+.hero-side p{font-size:12px;color:#c3a4ba}.hero-foot{font-family:var(--typewriter);font-size:10px;color:#a59b7e}
+.ticker{background:#c7be9f;color:#252318;border-block:3px solid #171610;font-family:var(--typewriter);font-size:11px;letter-spacing:1px;transform:rotate(-.4deg) scale(1.005);padding:14px}
+.section{padding:82px 0}.section-dark{background:#242219;border-block:3px dashed #686047}
+.section-head h2,.split h2{font-family:var(--typewriter);font-weight:400;letter-spacing:-3px;text-shadow:2px 2px 0 #0008}
+.section-head h2 i,.split h2 i{font-family:var(--typewriter);font-weight:400;color:#c39ac0}
+.subcopy{font-family:var(--typewriter);font-size:14px;color:#c4bda9;line-height:1.6}
+.cards{align-items:start;gap:22px}
+.grow-card,.note-card,.post-card,.video-card{background:#d9d0b8;color:#201f17;border:2px solid #0f100c;box-shadow:5px 6px 0 #0008;overflow:hidden}
+.grow-card:nth-child(odd){transform:rotate(-1deg)}.grow-card:nth-child(even){transform:rotate(1.1deg) translateY(9px)}
+.grow-art{height:155px;background:repeating-linear-gradient(135deg,#4c5235 0 8px,#3e422e 8px 12px);border-bottom:2px solid #171610}
+.grow-art:after{font-size:110px;color:#e8ddb54f;transform:rotate(-12deg)}
+.status{background:#1c1b13;color:#c7cb72;border:1px solid #d7cc9a;transform:rotate(-2deg)}
+.grow-body,.note-body,.post-body{padding:20px}
+.grow-card .meta,.note-card .meta,.post-card .meta,.video-card .meta{color:#5f5b4e}
+.grow-card h3,.note-card h3,.post-card h3,.video-card h3{font-family:var(--typewriter);font-weight:400;letter-spacing:-1px;color:#232117;text-transform:none}
+.grow-card p,.note-card p,.post-card p,.video-card p{color:#494638;font-family:var(--typewriter);font-size:13px;line-height:1.55}
+.track{height:7px;background:#aea58c;border:1px solid #28271e;transform:rotate(-.4deg)}.track span{background:#858a4c}
+.grow-foot{color:#3d3a2d;font-family:var(--typewriter)}
+.grow-foot button{color:#28251b;border:0;box-shadow:none;text-decoration:underline;font-family:var(--typewriter)}
+.empty-state{background:#d2c7a7;color:#2d291c;border:2px dashed #514b38;box-shadow:4px 4px 0 #0007;transform:rotate(-.4deg);font-family:var(--typewriter)}
+.empty-state strong{font-family:var(--typewriter);font-weight:400;color:#252117;text-transform:none;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#a36d55}
+.stats{border-block:2px dashed #686047}.stat strong{color:#c5bd71;font-family:var(--typewriter);font-weight:400}.stat span{font-family:var(--typewriter);font-size:10px;letter-spacing:0;color:#b6ae95}
+.filterbar button{font-family:var(--typewriter);font-size:10px;color:#d4cbb5;border:1px dashed #8c836a;box-shadow:none}.filterbar button.active{background:#c9c09e;color:#252318;border:2px solid #171610}
+.note-list{gap:17px}.note-card{grid-template-columns:105px 1fr}.note-card:nth-child(odd){transform:rotate(.55deg)}.note-card:nth-child(even){transform:rotate(-.7deg)}
+.note-date{border-right:2px dashed #847c66;color:#5d6537;font-family:var(--typewriter);font-size:11px}.note-type{color:#805f79;font-family:var(--typewriter);font-size:10px}
+.underground{background:#a995a2;color:#231b24;border-block:4px solid #171610;transform:rotate(.3deg) scale(1.004)}
+.underground .eyebrow{color:#4b3b4e!important}.underground h2{font-family:var(--typewriter);font-weight:400;text-shadow:2px 2px 0 #ffffff44}.underground h2 i{color:#f0e1c4}
+.underground-copy{font-family:var(--typewriter);font-size:15px;color:#322735}
+.orbit{border:3px dashed #47374a;border-radius:43% 57% 48% 52%;box-shadow:7px 7px 0 #59465a55}
+.mushroom-cluster{transform:rotate(-13deg);filter:grayscale(.5) drop-shadow(5px 6px 0 #493449)}
+.tag-row span{border:2px dashed #58445a;color:#3e2e41;font-family:var(--typewriter);font-size:10px}
+.post-card{background:#ded4be}.post-card .post-cover{background:repeating-linear-gradient(45deg,#5b4d60 0 9px,#706076 9px 14px);border-bottom:2px solid #171610}
+.post-card button{color:#252117}
+.channel-panel{background:#ba735e;border:3px solid #171610;box-shadow:7px 7px 0 #0008;transform:rotate(-.5deg)}
+.channel-panel .eyebrow{color:#35251e}.channel-panel h3{font-family:var(--typewriter);font-weight:400;color:#201812;text-transform:none}.channel-panel p{font-family:var(--typewriter);font-size:14px;color:#35251e}
+.channel-links a{border:2px dashed #392820;color:#261b16;font-family:var(--typewriter);font-size:10px}.channel-mark{color:#41313b}
+.video-card{background:#d8cfb7}.video-card h3{font-family:var(--typewriter);font-weight:400}.video-card p{font-family:var(--typewriter)}
+.about-strip{font-family:var(--typewriter);font-size:10px;letter-spacing:0}
+footer{font-family:var(--typewriter);font-size:10px;letter-spacing:0}
+.modal{background:#090907eF;backdrop-filter:grayscale(1) blur(4px)}
+.dialog{background:#d9d0b8;color:#252117;border:3px solid #090907;box-shadow:9px 10px 0 #000;transform:rotate(-.25deg)}
+.dialog-head{border-bottom:2px dashed #776f59}.dialog-head h2{font-family:var(--typewriter);font-weight:400;color:#231f17}.close{color:#252117}
+.help{background:#b9b187;border-left:5px solid #7b8144;color:#252117;font-family:var(--typewriter);font-size:12px}
+.form-grid label{color:#484333;font-family:var(--typewriter);font-size:10px;letter-spacing:0;text-transform:none}
+.form-grid input,.form-grid textarea,.form-grid select{background:#eee7d5;color:#252117;border:2px solid #6f6755;font-family:var(--typewriter);font-size:13px}
+.admin-tabs{border-bottom:2px dashed #827961}.admin-tabs button{color:#393426;border-color:#726b58;box-shadow:none}.admin-tabs button.active{color:#5d6636;border-color:#62683c}
+.admin-list{border-top:2px dashed #827961}.admin-row{border-bottom:1px dashed #9c927a;color:#29251b;font-family:var(--typewriter);font-size:12px}.admin-row small{color:#615c4c}
+.row-actions button{font-family:var(--typewriter);box-shadow:none}.danger{color:#8b3d32}
+.statusline{font-family:var(--typewriter);color:#5d584a}.statusline.good{color:#4b612d}.statusline.bad{color:#903f31}
+.detail-body{color:#282418;font-family:var(--typewriter);font-size:14px}.detail-body iframe{border:2px solid #211e16}
+.btn-fill{background:#b6bd72;color:#1c1d12;border:2px solid #15160f;box-shadow:4px 4px 0 #0008}
+@media(max-width:600px){.hero h1{letter-spacing:-3px}.hero-side{opacity:.24}.grow-card:nth-child(n),.note-card:nth-child(n),.post-card:nth-child(n){transform:rotate(0)}.section{padding:62px 0}.note-card{grid-template-columns:76px 1fr}.ticker{font-size:9px}}
+
 </style>
 </head>
 <body>
 <header class="topbar">
 <a class="brand" href="#top"><span class="brand-mark">♠</span><span>CROW NEST<small>SEEDSPIRACY FIELD NOTES</small></span></a>
-<nav class="topnav"><a href="#grows">GROWS</a><a href="#notes">FIELD NOTES</a><a href="#underground">UNDERGROUND</a><a href="#channel">CHANNEL</a></nav>
+<nav class="topnav"><a href="#grows">GROWS</a><a href="#upgrades">TINKER BENCH</a><a href="#notes">FIELD NOTES</a><a href="#underground">UNDERGROUND</a><a href="#channel">CHANNEL</a></nav>
 <button class="admin-open" id="openAdmin">✳ MY BACK POCKET</button>
 </header>
 <main id="top">
 <section class="hero"><div class="wrap hero-inner">
-<div class="hero-kicker"><span class="dot"></span> THE GARDEN IS OPEN / COME HAVE A LOOK</div>
-<h1>TAKE IT<br><span class="moss">EASY.</span><br><span class="plum">Grow weird.</span></h1>
-<p class="hero-copy">A little dirt under the nails. A little curiosity. A lot of notes. <em>Crow Nest is the Seedspiracy spot for the grows, the experiments, the happy accidents and the stuff we learned the hard way.</em> No perfect-garden act. Just the real thing.</p>
+<div class="hero-kicker"><span class="dot"></span> A GROW ROOM NOTEBOOK / NOT A SHOW HOME</div>
+<h1>DIRT.<br><span class="moss">CHAOS.</span><br><span class="plum">Good ideas.</span></h1>
+<p class="hero-copy">This is where we keep the grow notes, the experiments, the sketchy little theories and the stuff that actually happened. <em>No showroom plants. No guru routine. Just us figuring it out, one questionable idea at a time.</em></p>
 <div class="hero-buttons"><a class="btn btn-fill" href="#grows">WANDER INTO THE GARDEN ↘</a><a class="btn" href="#channel">PUT SOMETHING ON ↗</a></div>
 </div><div class="hero-side"><div class="mushroom-sketch">🍄</div><p>GOOD THINGS TAKE TIME.<br>SO DOES A GOOD RABBIT HOLE.</p></div>
 <div class="hero-foot"><span>EDMONTON, ALBERTA</span><span>GROWING MINDS / STAY CURIOUS</span><span id="today"></span></div></section>
@@ -44,6 +117,12 @@ footer{padding:32px 6vw;display:flex;justify-content:space-between;gap:16px;flex
 <div class="section-head"><div><div class="eyebrow">01 / THE GARDEN</div><h2>WHAT'S <i>growing</i></h2></div><p class="subcopy">Follow the grows as they happen. Progress, pauses, weird leaves, little wins. The whole story stays in the log.</p></div>
 <div class="cards" id="growGrid"><div class="empty-state"><strong>Garden's getting set up.</strong>Real grow logs will show up here once they're published.</div></div>
 <div class="stats"><div class="stat"><strong id="growCount">0</strong><span>GROWS ON THE BOARD</span></div><div class="stat"><strong id="entryCount">0</strong><span>FIELD NOTES POSTED</span></div><div class="stat"><strong id="postCount">0</strong><span>UNDERGROUND DROPS</span></div></div>
+</div></section>
+
+<section class="section mods-section" id="upgrades"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">02 / THE BACK OF THE NOTEBOOK</div><h2>THE TINKER <i>BENCH</i></h2></div><p class="subcopy">Got an idea for a grow upgrade? Better airflow, different lights, new kit, a weird experiment? Chuck it on the bench and let's pull it apart.</p></div>
+<div class="mods-intro"><div class="mods-stamp">IDEAS<br>WELCOME<br>✳</div><div><strong>NOT EVERY IDEA MAKES IT INTO THE GROW.</strong><p>We can kick ideas around first, figure out what they might improve, what they'll cost, and whether they're worth testing. Public suggestions land in a little approval queue before they appear here.</p></div></div>
+<div class="mods-grid" id="upgradeGrid"><div class="empty-state"><strong>Bench is clear.</strong>First upgrade ideas will show up here when we put them up for discussion.</div></div>
 </div></section>
 <section class="section section-dark" id="notes"><div class="wrap notes-layout">
 <div class="split"><div class="eyebrow">02 / THE NOTEBOOK</div><h2>FIELD<br>NOTES<i>.</i></h2><p class="subcopy">Watering, feeding, light, environment and the little observations that are easy to forget by next week.</p><div class="filterbar" id="filters"><button class="active" data-filter="all">ALL OF IT</button><button data-filter="watering">WATER</button><button data-filter="feeding">FEED</button><button data-filter="lighting">LIGHT</button><button data-filter="observation">ODD STUFF</button></div></div>
@@ -68,11 +147,14 @@ footer{padding:32px 6vw;display:flex;justify-content:space-between;gap:16px;flex
 <div id="loginArea" class="login-box"><p class="subcopy">Your private door. Visitors don't need an account. Sign in here to add or update the garden, notebook, videos and underground posts.</p><form id="loginForm" class="form-grid"><label class="wide">Email<input type="email" name="email" required autocomplete="username"></label><label class="wide">Password<input type="password" name="password" required autocomplete="current-password"></label><div class="wide"><button class="btn-fill" type="submit">UNLOCK THE NEST ↗</button></div></form><p id="loginMessage" class="statusline"></p></div>
 <div id="adminArea" hidden>
 <div class="help">You're in. Drafts stay private; tick <strong>Publish this</strong> when you're ready for everyone to see it. Visitors never need to log in.</div>
-<div class="admin-tabs"><button class="active" data-admin-tab="grows">GROWS</button><button data-admin-tab="entries">FIELD NOTES</button><button data-admin-tab="posts">UNDERGROUND</button><button data-admin-tab="videos">VIDEOS</button><button id="logoutBtn">SIGN OUT</button></div>
+<div class="admin-tabs"><button class="active" data-admin-tab="grows">GROWS</button><button data-admin-tab="entries">FIELD NOTES</button><button data-admin-tab="upgrades">MOD IDEAS</button><button data-admin-tab="discussion">DISCUSSION</button><button data-admin-tab="posts">UNDERGROUND</button><button data-admin-tab="videos">VIDEOS</button><button id="logoutBtn">SIGN OUT</button></div>
 <div id="pane-grows" class="admin-pane active"><div class="admin-layout"><form class="form-grid" id="growForm"><input type="hidden" name="id"><label class="wide">Grow name<input name="name" required placeholder="The winter window grow"></label><label>Plant / cultivar<input name="plant" placeholder="What are we looking at?"></label><label>Stage<select name="stage"><option>Germination</option><option>Seedling</option><option>Vegetative</option><option>Flowering</option><option>Harvest</option><option>Complete</option><option>Other</option></select></label><label>Start date<input name="start_date" type="date"></label><label>Cover photo<input name="cover_file" type="file" accept="image/*"></label><label class="wide">Photo URL (optional)<input name="cover_image" type="url" placeholder="https://…"></label><label class="wide">The story so far<textarea name="description" placeholder="What is this grow about? What should people know?"></textarea></label><label class="wide checkrow"><input name="is_published" type="checkbox"> Publish this grow</label><div class="wide"><button class="btn-fill" type="submit">SAVE GROW</button> <button type="button" data-reset="growForm">NEW / CLEAR</button></div></form><div><div class="eyebrow">YOUR GROWS</div><div class="admin-list" id="growAdminList"></div></div></div></div>
 <div id="pane-entries" class="admin-pane"><div class="admin-layout"><form class="form-grid" id="entryForm"><input type="hidden" name="id"><label class="wide">Grow<select name="grow_id" required></select></label><label>Entry type<select name="entry_type"><option value="observation">Observation</option><option value="watering">Watering</option><option value="feeding">Feeding</option><option value="lighting">Lighting</option></select></label><label>Date<input name="entry_date" type="date" required></label><label class="wide">Title<input name="title" required placeholder="A few new leaves…"></label><label class="wide">What happened?<textarea name="details" placeholder="Add the details, measurements or thoughts."></textarea></label><label>Water / feed amount<input name="amount" placeholder="750 ml / 2 ml per L"></label><label>Light distance<input name="light_distance" placeholder="30 cm"></label><label>Light intensity<input name="light_intensity" placeholder="60% / 450 PPFD"></label><label>Photo upload<input name="photo_file" type="file" accept="image/*"></label><label class="wide">Photo URL (optional)<input name="photo_url" type="url" placeholder="https://…"></label><label class="wide checkrow"><input name="is_published" type="checkbox"> Publish this note</label><div class="wide"><button class="btn-fill" type="submit">SAVE FIELD NOTE</button> <button type="button" data-reset="entryForm">NEW / CLEAR</button></div></form><div><div class="eyebrow">YOUR NOTEBOOK</div><div class="admin-list" id="entryAdminList"></div></div></div></div>
 <div id="pane-posts" class="admin-pane"><div class="admin-layout"><form class="form-grid" id="postForm"><input type="hidden" name="id"><label class="wide">Post title<input name="title" required placeholder="The long version…"></label><label>Category<select name="category"><option>Field report</option><option>Gear review</option><option>Experiment</option><option>Behind the scenes</option><option>Lessons learned</option><option>Other</option></select></label><label>Cover image<input name="cover_file" type="file" accept="image/*"></label><label class="wide">Short intro<textarea name="summary" placeholder="A quick preview for the card."></textarea></label><label class="wide">Full post<textarea name="body" placeholder="Write the full story here. New paragraphs are kept."></textarea></label><label class="wide">Related YouTube URL (optional)<input name="youtube_url" type="url" placeholder="https://www.youtube.com/watch?v=…"></label><label class="wide checkrow"><input name="is_published" type="checkbox"> Publish this post</label><div class="wide"><button class="btn-fill" type="submit">SAVE UNDERGROUND POST</button> <button type="button" data-reset="postForm">NEW / CLEAR</button></div></form><div><div class="eyebrow">YOUR WRITING</div><div class="admin-list" id="postAdminList"></div></div></div></div>
 <div id="pane-videos" class="admin-pane"><div class="admin-layout"><form class="form-grid" id="videoForm"><input type="hidden" name="id"><label class="wide">Video title<input name="title" required placeholder="The new upload…"></label><label class="wide">YouTube URL<input name="youtube_url" type="url" required placeholder="https://youtu.be/…"></label><label class="wide">Description<textarea name="description" placeholder="A little context for the video."></textarea></label><label class="wide checkrow"><input name="is_published" type="checkbox"> Feature this video on Crow Nest</label><div class="wide"><button class="btn-fill" type="submit">SAVE VIDEO</button> <button type="button" data-reset="videoForm">NEW / CLEAR</button></div></form><div><div class="eyebrow">FEATURED VIDEOS</div><div class="admin-list" id="videoAdminList"></div></div></div></div>
+
+<div id="pane-upgrades" class="admin-pane"><div class="admin-layout"><form class="form-grid" id="upgradeForm"><input type="hidden" name="id"><label class="wide">Which grow?<select name="grow_id" required></select></label><label class="wide">Upgrade idea<input name="title" required placeholder="More airflow / better light / build a shelf…"></label><label>Type<select name="category"><option>Lighting</option><option>Airflow</option><option>Environment</option><option>Training</option><option>Growing medium</option><option>Equipment</option><option>Experiment</option><option>Other</option></select></label><label>Status<select name="status"><option value="idea">Just an idea</option><option value="researching">Looking into it</option><option value="approved">On the list</option><option value="testing">Testing it</option><option value="installed">Installed</option><option value="parked">Parked for now</option></select></label><label class="wide">What are we thinking?<textarea name="description" placeholder="What do we want to change? What problem are we trying to solve?"></textarea></label><label class="wide">Why might it help?<textarea name="why" placeholder="Expected benefit, trade-offs, what we want to learn…"></textarea></label><label>Parts / kit needed<input name="parts_needed" placeholder="Fan, duct, sensor…"></label><label>Rough cost<input name="estimated_cost" placeholder="$ / free / not sure yet"></label><label class="wide checkrow"><input name="is_published" type="checkbox"> Put this idea on the public Tinker Bench</label><div class="wide"><button class="btn-fill" type="submit">SAVE THE IDEA</button> <button type="button" data-reset="upgradeForm">NEW / CLEAR</button></div></form><div><div class="eyebrow">ON THE BENCH</div><div class="admin-list" id="upgradeAdminList"></div></div></div></div>
+<div id="pane-discussion" class="admin-pane"><div class="help">Suggestions from visitors land here first. Approve the good ones to show them publicly, hide them again, or delete spam. Nothing appears publicly until you approve it.</div><div class="admin-list" id="upgradeCommentAdminList"></div></div>
 </div>
 </div></div>
 <div class="modal" id="detailModal" aria-hidden="true"><div class="dialog"><div class="dialog-head"><div><div class="eyebrow" id="detailType">FIELD FILE</div><h2 id="detailTitle">DETAILS</h2></div><button class="close" id="closeDetail">CLOSE ✕</button></div><div class="detail-body" id="detailBody"></div></div></div>
@@ -82,7 +164,7 @@ footer{padding:32px 6vw;display:flex;justify-content:space-between;gap:16px;flex
 'use strict';
 var $=function(id){return document.getElementById(id);};
 var supa=null,session=null,isAdmin=false,cloudReady=false;
-var records={grows:[],field_entries:[],underground_posts:[],videos:[]};
+var records={grows:[],field_entries:[],underground_posts:[],videos:[],grow_upgrades:[],upgrade_comments:[]};
 var filter='all';
 var config=window.CROW_NEST_CONFIG||{};
 var url=config.supabaseUrl||'',key=config.supabaseAnonKey||'';
@@ -104,10 +186,17 @@ var grows=records.grows.filter(function(x){return x.is_published;});
 var entries=records.field_entries.filter(function(x){return x.is_published;});
 var posts=records.underground_posts.filter(function(x){return x.is_published;});
 var videos=records.videos.filter(function(x){return x.is_published;});
+var upgrades=records.grow_upgrades.filter(function(x){return x.is_published;});
+var comments=records.upgrade_comments.filter(function(x){return x.is_approved;});
 $('growCount').textContent=grows.length;$('entryCount').textContent=entries.length;$('postCount').textContent=posts.length;
 $('growGrid').innerHTML=grows.length?grows.map(function(g){
 var img=safeUrl(g.cover_image);return '<article class="grow-card"><div class="grow-art"'+(img?' style="background-image:linear-gradient(#10130c55,#10130c55),url(&quot;'+esc(img)+'&quot;)"':'')+'><span class="status">'+esc(g.stage||'IN PROGRESS')+'</span></div><div class="grow-body"><div class="meta"><span>FIELD FILE</span><span>DAY '+days(g.start_date)+'</span></div><h3>'+esc(g.name)+'</h3><div class="meta"><span>'+esc(g.plant||'GROW JOURNAL')+'</span><span>'+dateLabel(g.start_date)+'</span></div><p>'+esc(g.description||'A grow in progress. More details coming as they happen.')+'</p><div class="track"><span style="width:'+stagePct(g.stage)+'%"></span></div><div class="grow-foot"><span>'+esc(g.stage||'IN PROGRESS')+'</span><button data-grow="'+esc(g.id)+'">OPEN FIELD FILE ↗</button></div></div></article>';
 }).join(''):empty('Garden’s getting set up.','The real grow logs will show up here once they’re published.');
+$('upgradeGrid').innerHTML=upgrades.map(function(u){
+var g=grows.find(function(x){return x.id===u.grow_id;});
+var n=comments.filter(function(x){return x.upgrade_id===u.id;}).length;
+return '<article class="upgrade-card"><div class="upgrade-rip">TINKER BENCH / '+esc(u.category||'IDEA')+'</div><div class="upgrade-content"><div class="upgrade-head"><span class="upgrade-status">'+esc((u.status||'idea').replace('_',' ').toUpperCase())+'</span><span class="upgrade-grow">'+esc(g?g.name:'GROW FILE')+'</span></div><h3>'+esc(u.title)+'</h3><p>'+esc(u.description||'')+'</p>'+(u.why?'<p class="upgrade-why"><b>WHY:</b> '+esc(u.why)+'</p>':'')+'<div class="upgrade-meta">'+(u.parts_needed?'<span>NEED: '+esc(u.parts_needed)+'</span>':'')+(u.estimated_cost?'<span>COST: '+esc(u.estimated_cost)+'</span>':'')+'</div><button data-upgrade="'+esc(u.id)+'">KICK THIS IDEA AROUND ('+n+') ↗</button></div></article>';
+}).join('')||empty('Bench is clear.','No upgrade ideas have been posted yet. Got a thought? Check back soon.');
 $('noteList').innerHTML=entries.filter(function(e){return filter==='all'||e.entry_type===filter;}).sort(function(a,b){return String(b.entry_date).localeCompare(String(a.entry_date));}).map(function(e){
 var img=safeUrl(e.photo_url);return '<article class="note-card"><div class="note-date">'+dateLabel(e.entry_date)+'</div><div class="note-body"><div class="note-type">'+esc((e.entry_type||'NOTE').toUpperCase())+'</div><h3>'+esc(e.title)+'</h3><p>'+esc(e.details||'')+'</p><div class="meta">'+[e.amount,e.light_distance?'LIGHT DISTANCE '+e.light_distance:'',e.light_intensity?'INTENSITY '+e.light_intensity:''].filter(Boolean).map(esc).join(' · ')+'</div>'+(img?'<img src="'+esc(img)+'" alt="Field note photo" loading="lazy">':'')+'</div></article>';
 }).join('')||empty('Fresh page.','No field notes in this category yet.');
@@ -121,10 +210,10 @@ document.querySelectorAll('[data-filter]').forEach(function(b){b.classList.toggl
 }
 async function loadRecords(adminMode){
 if(!supa){render();return;}
-var specs=[['grows','grows','start_date'],['field_entries','field_entries','entry_date'],['underground_posts','underground_posts','created_at'],['videos','videos','created_at']];
+var specs=[['grows','grows','start_date','is_published'],['field_entries','field_entries','entry_date','is_published'],['underground_posts','underground_posts','created_at','is_published'],['videos','videos','created_at','is_published'],['grow_upgrades','grow_upgrades','created_at','is_published'],['upgrade_comments','upgrade_comments','created_at','is_approved']];
 var results=await Promise.all(specs.map(async function(s){
 var q=supa.from(s[1]).select('*').order(s[2],{ascending:false});
-if(!adminMode)q=q.eq('is_published',true);
+if(!adminMode)q=q.eq(s[3],true);
 var r=await q;return {key:s[0],data:r.data||[],error:r.error};
 }));
 var bad=results.find(function(r){return r.error;});
@@ -167,9 +256,14 @@ renderRows('growAdminList','grows',records.grows,'name','stage');
 renderRows('entryAdminList','field_entries',records.field_entries,'title','entry_type');
 renderRows('postAdminList','underground_posts',records.underground_posts,'title','category');
 renderRows('videoAdminList','videos',records.videos,'title','youtube_url');
+renderRows('upgradeAdminList','grow_upgrades',records.grow_upgrades,'title','status');
+$('upgradeCommentAdminList').innerHTML=records.upgrade_comments.length?records.upgrade_comments.slice().sort(function(a,b){return String(b.created_at).localeCompare(String(a.created_at));}).map(function(x){return '<div class="admin-row"><div><b>'+esc(x.display_name)+'</b> · '+esc(dateLabel(String(x.created_at||'').slice(0,10)))+'<small>'+esc(x.comment)+'</small><small>'+esc(x.is_approved?'VISIBLE TO VISITORS':'WAITING FOR APPROVAL')+'</small></div><div class="row-actions"><button data-comment-approve="'+esc(x.id)+'" data-next="'+(!x.is_approved)+'">'+(x.is_approved?'HIDE':'APPROVE')+'</button><button class="danger" data-comment-delete="'+esc(x.id)+'">DELETE</button></div></div>';}).join(''):'<div class="empty-state"><strong>Nothing in the queue.</strong>Visitor suggestions will appear here.</div>';
 var sel=$('entryForm').elements.grow_id;var selected=sel.value;
 sel.innerHTML=records.grows.map(function(g){return '<option value="'+esc(g.id)+'">'+esc(g.name)+'</option>';}).join('');
 if(selected)sel.value=selected;
+var usel=$('upgradeForm').elements.grow_id;var oldUpgrade=usel.value;
+usel.innerHTML=records.grows.map(function(g){return '<option value="'+esc(g.id)+'">'+esc(g.name)+'</option>';}).join('');
+if(oldUpgrade)usel.value=oldUpgrade;
 }
 function formObject(form){
 var o={};new FormData(form).forEach(function(v,k){if(k!=='id'&&k!=='cover_file'&&k!=='photo_file'&&k!=='is_published')o[k]=v;});
@@ -201,10 +295,10 @@ toast('Saved. Live data has been updated.');await loadRecords(true);
 }
 async function editRecord(table,id){
 var row=(records[table]||[]).find(function(x){return x.id===id;});if(!row)return;
-var formId=({grows:'growForm',field_entries:'entryForm',underground_posts:'postForm',videos:'videoForm'})[table];var form=$(formId);
+var formId=({grows:'growForm',field_entries:'entryForm',underground_posts:'postForm',videos:'videoForm',grow_upgrades:'upgradeForm'})[table];var form=$(formId);
 Object.keys(row).forEach(function(k){var el=form.elements[k];if(!el)return;if(el.type==='checkbox')el.checked=!!row[k];else if(el.type!=='file')el.value=row[k]==null?'':row[k];});
 form.elements.id.value=row.id;
-adminTab(({grows:'grows',field_entries:'entries',underground_posts:'posts',videos:'videos'})[table]);
+adminTab(({grows:'grows',field_entries:'entries',underground_posts:'posts',videos:'videos',grow_upgrades:'upgrades'})[table]);
 form.scrollIntoView({behavior:'smooth',block:'start'});
 }
 async function deleteRecord(table,id){
@@ -218,11 +312,36 @@ $('closeDetail').addEventListener('click',closeDetail);$('detailModal').addEvent
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAdmin();closeDetail();}});
 $('filters').addEventListener('click',function(e){var b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;render();});
 $('growGrid').addEventListener('click',function(e){var b=e.target.closest('[data-grow]');if(!b)return;var g=records.grows.find(function(x){return x.id===b.dataset.grow;});if(!g)return;var related=records.field_entries.filter(function(x){return x.grow_id===g.id&&x.is_published;}).sort(function(a,b){return String(b.entry_date).localeCompare(String(a.entry_date));});var html='<p>'+esc(g.plant||'')+' · '+esc(g.stage||'')+' · Started '+dateLabel(g.start_date)+'</p><p>'+esc(g.description||'')+'</p>'+(safeUrl(g.cover_image)?'<img src="'+esc(safeUrl(g.cover_image))+'" alt="Grow photo">':'')+'<h3>FIELD NOTES</h3>'+related.map(function(x){return '<p><strong>'+dateLabel(x.entry_date)+' / '+esc(x.title)+'</strong><br>'+esc(x.details||'')+'</p>';}).join('');detail('GROW FILE',g.name,html);});
+$('upgradeGrid').addEventListener('click',function(e){
+var b=e.target.closest('[data-upgrade]');if(!b)return;
+var u=records.grow_upgrades.find(function(x){return x.id===b.dataset.upgrade;});if(!u)return;
+var g=records.grows.find(function(x){return x.id===u.grow_id;});
+var comments=records.upgrade_comments.filter(function(x){return x.upgrade_id===u.id&&x.is_approved;});
+var html='<div class="upgrade-detail-meta">'+esc(g?g.name:'GROW FILE')+' / '+esc(u.category||'IDEA')+' / '+esc((u.status||'idea').toUpperCase())+'</div><p>'+esc(u.description||'')+'</p>'+(u.why?'<p><strong>WHY WE’RE CONSIDERING IT</strong><br>'+esc(u.why)+'</p>':'')+(u.parts_needed?'<p><strong>WHAT WE NEED:</strong> '+esc(u.parts_needed)+'</p>':'')+(u.estimated_cost?'<p><strong>ROUGH COST:</strong> '+esc(u.estimated_cost)+'</p>':'')+'<hr><h3>THE BACK-AND-FORTH</h3><div class="approved-comments">'+(comments.map(function(x){return '<div class="public-comment"><b>'+esc(x.display_name)+'</b><small>'+dateLabel(String(x.created_at||'').slice(0,10))+'</small><p>'+esc(x.comment)+'</p></div>';}).join('')||'<p>No one has chimed in yet. Be the first to throw an idea in.</p>')+'</div><form class="comment-form" id="upgradeCommentForm" data-upgrade-id="'+esc(u.id)+'"><b>GOT A THOUGHT? LEAVE IT HERE.</b><label>NAME<input name="display_name" maxlength="40" required placeholder="What should we call you?"></label><label>YOUR IDEA<textarea name="comment" minlength="3" maxlength="1600" required placeholder="What would you try? What should we look into?"></textarea></label><label class="trap">Website<input name="website" tabindex="-1" autocomplete="off"></label><button class="btn-fill" type="submit">SEND IT TO THE BENCH ↗</button><small>Comments are checked before they go public. No account needed.</small></form>';
+detail('GROW MOD / OPEN DISCUSSION',u.title,html);
+});
 $('postGrid').addEventListener('click',function(e){var b=e.target.closest('[data-post]');if(!b)return;var p=records.underground_posts.find(function(x){return x.id===b.dataset.post;});if(!p)return;var vid=videoId(p.youtube_url);detail(p.category||'UNDERGROUND',p.title,(p.summary?'<p>'+esc(p.summary)+'</p>':'')+'<p>'+esc(p.body||'').replace(/\n/g,'<br>')+'</p>'+(safeUrl(p.cover_image)?'<img src="'+esc(safeUrl(p.cover_image))+'" alt="">':'')+(vid?'<iframe src="https://www.youtube-nocookie.com/embed/'+vid+'" allowfullscreen title="'+esc(p.title)+'"></iframe>':''));});
+$('detailBody').addEventListener('submit',async function(e){
+var form=e.target.closest('#upgradeCommentForm');if(!form)return;e.preventDefault();
+if(!supa){toast('Discussion is not connected yet.');return;}
+if(form.elements.website.value){toast('Thanks.');closeDetail();return;}
+var values=new FormData(form);var payload={upgrade_id:form.dataset.upgradeId,display_name:String(values.get('display_name')||'').trim(),comment:String(values.get('comment')||'').trim(),is_approved:false};
+if(!payload.display_name||payload.comment.length<3){toast('Add your name and a little more detail.');return;}
+var submit=form.querySelector('button[type="submit"],button');submit.disabled=true;
+var result=await supa.from('upgrade_comments').insert(payload);
+submit.disabled=false;
+if(result.error){toast('Could not send: '+result.error.message);return;}
+toast('Got it — your comment is waiting for a quick review.');closeDetail();
+});
+document.addEventListener('click',async function(e){
+var approve=e.target.closest('[data-comment-approve]');if(approve){var res=await supa.from('upgrade_comments').update({is_approved:approve.dataset.next==='true'}).eq('id',approve.dataset.commentApprove);if(res.error){toast('Could not update: '+res.error.message);return;}toast('Discussion updated.');await loadRecords(true);return;}
+var del=e.target.closest('[data-comment-delete]');if(del){if(!confirm('Delete this visitor comment?'))return;var res2=await supa.from('upgrade_comments').delete().eq('id',del.dataset.commentDelete);if(res2.error){toast('Could not delete: '+res2.error.message);return;}toast('Comment deleted.');await loadRecords(true);}
+});
 $('loginForm').addEventListener('submit',async function(e){e.preventDefault();if(!supa)return;var f=e.currentTarget;var r=await supa.auth.signInWithPassword({email:f.elements.email.value,password:f.elements.password.value});if(r.error){$('loginMessage').textContent=r.error.message;return;}session=r.data.session;if(!(await verifyAdmin())){$('loginMessage').textContent='That account is not on the Crow Nest admin list yet.';showAdmin();return;}showAdmin();setStatus('Signed in. Your changes sync to the live site.','good');$('loginMessage').textContent='';await loadRecords(true);});
 $('logoutBtn').addEventListener('click',async function(){await supa.auth.signOut();session=null;isAdmin=false;showAdmin();setStatus('Signed out.','');});
 document.querySelectorAll('[data-admin-tab]').forEach(function(b){b.addEventListener('click',function(){adminTab(b.dataset.adminTab);});});
-[['growForm','grows'],['entryForm','field_entries'],['postForm','underground_posts'],['videoForm','videos']].forEach(function(pair){$(pair[0]).addEventListener('submit',function(e){e.preventDefault();saveForm(e.currentTarget,pair[1]);});});
+$('growForm').elements.start_date.value='';$('entryForm').elements.entry_date.value=new Date().toISOString().slice(0,10);$('upgradeForm').elements.grow_id.required=true;
+[['growForm','grows'],['entryForm','field_entries'],['postForm','underground_posts'],['videoForm','videos'],['upgradeForm','grow_upgrades']].forEach(function(pair){$(pair[0]).addEventListener('submit',function(e){e.preventDefault();saveForm(e.currentTarget,pair[1]);});});
 document.querySelectorAll('[data-reset]').forEach(function(b){b.addEventListener('click',function(){var f=$(b.dataset.reset);f.reset();f.elements.id.value='';});});
 document.addEventListener('click',function(e){var ed=e.target.closest('[data-edit-table]');if(ed){editRecord(ed.dataset.editTable,ed.dataset.id);return;}var del=e.target.closest('[data-delete-table]');if(del){deleteRecord(del.dataset.deleteTable,del.dataset.id);}});
 $('today').textContent=new Date().toLocaleDateString('en-CA',{month:'short',year:'numeric'}).toUpperCase();$('year').textContent=new Date().getFullYear();
