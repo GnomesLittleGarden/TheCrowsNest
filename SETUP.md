@@ -64,7 +64,7 @@ You can return to the same item and use EDIT or DELETE in the admin list. Publis
 
 ## Grow Mods / Tinker Bench
 
-The Tinker Bench is the place to kick around possible upgrades for individual grows.
+The **Next Up** list is the ordered upgrade queue. The **Tinker Bench** is the place to kick around possible upgrades and talk about them.
 
 - An admin creates an upgrade idea and links it to a grow.
 - Add the category, what you want to change, why it might help, parts/kit needed, rough cost and current status.
@@ -72,5 +72,6 @@ The Tinker Bench is the place to kick around possible upgrades for individual gr
 - Visitors can open an idea and leave a comment without creating an account.
 - Visitor comments are private until you approve them in **MY BACK POCKET → DISCUSSION**.
 - Use **MOD IDEAS** to edit the upgrade or move it through idea, researching, approved, testing, installed or parked.
+- Set the order in **MOD IDEAS** with the ↑ and ↓ buttons. The public **Next Up** list follows that exact order.
 
 If you already ran an earlier version of supabase-schema.sql, run the updated file again. It is written to add the Tinker Bench tables and refresh its policies without deleting existing grow records.
