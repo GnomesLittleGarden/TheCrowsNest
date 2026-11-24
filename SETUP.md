@@ -61,3 +61,16 @@ You can return to the same item and use EDIT or DELETE in the admin list. Publis
 - There are no public member accounts or community posts in this version. Only the owner/admin can publish.
 - Do not put private grow information into a public post unless you are comfortable with anyone seeing it.
 - Keep an occasional backup of important source text and original photos outside the website.
+
+## Grow Mods / Tinker Bench
+
+The Tinker Bench is the place to kick around possible upgrades for individual grows.
+
+- An admin creates an upgrade idea and links it to a grow.
+- Add the category, what you want to change, why it might help, parts/kit needed, rough cost and current status.
+- Publish it to put it on the public Tinker Bench.
+- Visitors can open an idea and leave a comment without creating an account.
+- Visitor comments are private until you approve them in **MY BACK POCKET → DISCUSSION**.
+- Use **MOD IDEAS** to edit the upgrade or move it through idea, researching, approved, testing, installed or parked.
+
+If you already ran an earlier version of supabase-schema.sql, run the updated file again. It is written to add the Tinker Bench tables and refresh its policies without deleting existing grow records.
