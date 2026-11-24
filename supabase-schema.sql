@@ -278,3 +278,7 @@ using (public.is_crow_nest_admin());
 grant select on public.grow_upgrades, public.upgrade_comments to anon, authenticated;
 grant insert on public.upgrade_comments to anon, authenticated;
 grant all on public.grow_upgrades, public.upgrade_comments to authenticated;
+
+
+-- Ordered Next Up queue (safe to run on an existing Crow Nest project).
+alter table public.grow_upgrades add column if not exists priority integer not null default 100;
