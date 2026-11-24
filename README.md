@@ -1,26 +1,34 @@
-# Crow Nest — Seedspiracy Grow Journal
+# Crow Nest — the Seedspiracy field journal
 
-A standalone, responsive grow-journal website for Seedspiracy.
+Crow Nest is a separate public grow journal for Seedspiracy. It has a relaxed, earthy, slightly psychedelic/grunge visual identity and is designed to feel like an actual field notebook rather than a corporate dashboard.
 
-## Included in this first build
-- Public grow cards with stage progress and days since start.
-- Field notes filtered by watering, feeding, lighting and observations.
-- Admin console for creating, editing and deleting grow records.
-- Field-entry logging for amounts, light distance, intensity and photo URLs.
-- YouTube video embeds.
-- JSON export/import backups.
-- Responsive dark botanical / underground visual identity.
+## Public site
+- Current grow cards and progress.
+- Published field notes with filters for watering, feeding, lighting and observations.
+- Longer Underground posts for gear notes, experiments, behind-the-scenes and lessons learned.
+- Featured YouTube videos embedded on the site.
+- Direct links to the complete SeedSpiracy YouTube library: videos, Shorts, livestreams and playlists.
+- Visitors do not need accounts.
 
-## Preview-mode limitations
-This first version stores records in the current browser's localStorage. It is not a shared database: edits do not sync to other devices or visitors. The admin console is not yet protected by server-side authentication. Treat this as a functional prototype, not a production content-management system.
+## Private publishing
+The “MY BACK POCKET” button opens the private admin sign-in. Once authenticated and allow-listed as an admin, the owner can create, edit and delete:
+- Grows and grow stages.
+- Field notes, measurements and photos.
+- Underground articles and long-form notes.
+- Featured YouTube videos.
 
-## Production milestones
-1. Connect a dedicated Supabase project for shared data and image storage.
-2. Add authenticated admin access and reviewed Row Level Security policies.
-3. Connect a separate hosting project and custom domain/subdomain.
-4. Replace sample content with approved Seedspiracy field records.
+Items are saved as drafts until “Publish this” is checked. Publishing updates the public website through Supabase. Images upload to the crow-nest-media storage bucket.
 
-Do not place Supabase service-role keys or other secrets in this repository.
+## Important: finish the one-time cloud connection
+The front end and database policies are prepared, but **shared posting is not live until Supabase is connected**. The browser-only/localStorage demo has been removed to avoid pretending an edit is visible to everyone when it is not.
 
-## Local preview
-Open index.html in a modern browser. No build step is required.
+Follow SETUP.md. You will need a Supabase project, then the project URL and public publishable/anon key. The key is designed to be used in a browser; never use a service_role or secret key in config.js.
+
+## Files
+- index.html — public site and admin interface.
+- config.js — Supabase public connection settings (blank until configured).
+- supabase-schema.sql — tables, security policies, admin allow-list and public image bucket.
+- SETUP.md — exact one-time setup instructions.
+
+## Hosting
+GitHub Pages deploys the static site from the main branch using .github/workflows/pages.yml.
