@@ -7,7 +7,9 @@ Crow Nest is a separate public grow journal for Seedspiracy. It has a relaxed, e
 - Published field notes with filters for watering, feeding, lighting and observations.
 - Longer Underground posts for gear notes, experiments, behind-the-scenes and lessons learned.
 - Featured YouTube videos embedded on the site.
-- The Tinker Bench for grow upgrade ideas, status tracking and moderated discussion.
+- A separate **Next Up** queue for ranking the next upgrades in order.
+- The **Tinker Bench** for grow upgrade ideas, status tracking and moderated discussion.
+- Playing-card suits and court-card details, with red/black harlequin diamonds and rough zine styling.
 - Direct links to the complete SeedSpiracy YouTube library: videos, Shorts, livestreams and playlists.
 - Visitors do not need accounts.
 
