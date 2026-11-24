@@ -181,3 +181,100 @@ using (bucket_id = 'crow-nest-media' and public.is_crow_nest_admin());
 -- insert into public.admin_users (user_id)
 -- select id from auth.users where email = 'you@example.com'
 -- on conflict (user_id) do nothing;
+
+
+-- Grow Mods / Tinker Bench
+create table if not exists public.grow_upgrades (
+  id uuid primary key default gen_random_uuid(),
+  grow_id uuid not null references public.grows(id) on delete cascade,
+  title text not null,
+  category text,
+  status text not null default 'idea'
+    check (status in ('idea','researching','approved','testing','installed','parked')),
+  description text,
+  why text,
+  parts_needed text,
+  estimated_cost text,
+  is_published boolean not null default false,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.upgrade_comments (
+  id uuid primary key default gen_random_uuid(),
+  upgrade_id uuid not null references public.grow_upgrades(id) on delete cascade,
+  display_name text not null check (char_length(btrim(display_name)) between 1 and 40),
+  comment text not null check (char_length(btrim(comment)) between 3 and 1600),
+  is_approved boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists grow_upgrades_published_idx
+on public.grow_upgrades (is_published, created_at desc);
+create index if not exists grow_upgrades_grow_idx
+on public.grow_upgrades (grow_id);
+create index if not exists upgrade_comments_thread_idx
+on public.upgrade_comments (upgrade_id, is_approved, created_at);
+
+alter table public.grow_upgrades enable row level security;
+alter table public.upgrade_comments enable row level security;
+
+drop policy if exists "Public read published grow upgrades" on public.grow_upgrades;
+create policy "Public read published grow upgrades"
+on public.grow_upgrades for select to anon, authenticated
+using (is_published = true or public.is_crow_nest_admin());
+
+drop policy if exists "Admins insert grow upgrades" on public.grow_upgrades;
+create policy "Admins insert grow upgrades"
+on public.grow_upgrades for insert to authenticated
+with check (public.is_crow_nest_admin());
+
+drop policy if exists "Admins update grow upgrades" on public.grow_upgrades;
+create policy "Admins update grow upgrades"
+on public.grow_upgrades for update to authenticated
+using (public.is_crow_nest_admin())
+with check (public.is_crow_nest_admin());
+
+drop policy if exists "Admins delete grow upgrades" on public.grow_upgrades;
+create policy "Admins delete grow upgrades"
+on public.grow_upgrades for delete to authenticated
+using (public.is_crow_nest_admin());
+
+drop policy if exists "Public read approved upgrade comments" on public.upgrade_comments;
+create policy "Public read approved upgrade comments"
+on public.upgrade_comments for select to anon, authenticated
+using (
+  (is_approved = true and exists (
+    select 1 from public.grow_upgrades u
+    where u.id = upgrade_id and u.is_published = true
+  )) or public.is_crow_nest_admin()
+);
+
+-- Visitors can submit comments without creating an account. New comments are always pending.
+drop policy if exists "Visitors can submit pending upgrade comments" on public.upgrade_comments;
+create policy "Visitors can submit pending upgrade comments"
+on public.upgrade_comments for insert to anon, authenticated
+with check (
+  is_approved = false
+  and char_length(btrim(display_name)) between 1 and 40
+  and char_length(btrim(comment)) between 3 and 1600
+  and exists (
+    select 1 from public.grow_upgrades u
+    where u.id = upgrade_id and u.is_published = true
+  )
+);
+
+drop policy if exists "Admins update upgrade comments" on public.upgrade_comments;
+create policy "Admins update upgrade comments"
+on public.upgrade_comments for update to authenticated
+using (public.is_crow_nest_admin())
+with check (public.is_crow_nest_admin());
+
+drop policy if exists "Admins delete upgrade comments" on public.upgrade_comments;
+create policy "Admins delete upgrade comments"
+on public.upgrade_comments for delete to authenticated
+using (public.is_crow_nest_admin());
+
+grant select on public.grow_upgrades, public.upgrade_comments to anon, authenticated;
+grant insert on public.upgrade_comments to anon, authenticated;
+grant all on public.grow_upgrades, public.upgrade_comments to authenticated;
