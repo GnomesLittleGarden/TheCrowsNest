@@ -96,6 +96,49 @@ footer{font-family:var(--typewriter);font-size:10px;letter-spacing:0}
 .btn-fill{background:#b6bd72;color:#1c1d12;border:2px solid #15160f;box-shadow:4px 4px 0 #0008}
 @media(max-width:600px){.hero h1{letter-spacing:-3px}.hero-side{opacity:.24}.grow-card:nth-child(n),.note-card:nth-child(n),.post-card:nth-child(n){transform:rotate(0)}.section{padding:62px 0}.note-card{grid-template-columns:76px 1fr}.ticker{font-size:9px}}
 
+
+/* Tinker Bench: crooked paper notes, pinned scraps and marker ink */
+.mods-section{background:#6e7550;color:#f0e6c7;border-block:4px dashed #242317;position:relative;overflow:hidden}
+.mods-section:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(172deg,transparent 0 23px,#202116 24px 25px)}
+.mods-section .wrap{position:relative;z-index:1}
+.mods-section .eyebrow{color:#eee0a4}
+.mods-section .section-head h2{color:#f2e8cb;text-shadow:3px 3px 0 #333822}
+.mods-section .section-head h2 i{color:#f0b2a1}
+.mods-section .subcopy{color:#e0d9bb}
+.mods-intro{position:relative;display:flex;align-items:center;gap:24px;background:#e0d6b7;color:#27251b;border:3px solid #18170f;box-shadow:8px 8px 0 #252619;padding:22px 25px;margin:28px 5px 36px;transform:rotate(.5deg)}
+.mods-intro:before{content:"";position:absolute;top:-10px;left:42%;width:92px;height:24px;background:#d4a86f99;transform:rotate(-4deg)}
+.mods-intro strong{font:18px var(--typewriter);color:#282317;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#a56d50}
+.mods-intro p{font:14px var(--typewriter);line-height:1.6;margin:6px 0 0;color:#45402e}
+.mods-stamp{min-width:92px;height:92px;border:3px solid #a35c48;border-radius:50%;display:grid;place-content:center;text-align:center;transform:rotate(-13deg);color:#a35c48;font:14px var(--typewriter)}
+.mods-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px;align-items:start}
+.upgrade-card{background:#e4dac1;color:#242117;border:3px solid #17160f;box-shadow:7px 8px 0 #252619;transform:rotate(-.65deg);position:relative;overflow:hidden}
+.upgrade-card:nth-child(even){transform:rotate(1deg) translateY(9px)}
+.upgrade-rip{padding:9px 15px;background:#c57c5d;color:#241a15;border-bottom:2px solid #18160f;font:12px var(--typewriter);letter-spacing:.3px}
+.upgrade-content{padding:19px}
+.upgrade-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.upgrade-status{background:#59633d;color:#f5edcf;padding:5px 8px;font:10px var(--typewriter);transform:rotate(-2deg)}
+.upgrade-grow{color:#716746;font:10px var(--typewriter)}
+.upgrade-card h3{font:24px var(--typewriter);font-weight:400;color:#242117;margin:15px 0 8px}
+.upgrade-card p{font:13px var(--typewriter);line-height:1.55;color:#484330}
+.upgrade-why{border-left:3px solid #9d765b;padding-left:12px}
+.upgrade-meta{display:flex;gap:8px 14px;flex-wrap:wrap;padding:10px 0;color:#686047;font:10px var(--typewriter);border-top:1px dashed #8b8067}
+.upgrade-card button{color:#252117;border-color:#373323;margin-top:8px;box-shadow:3px 3px 0 #8e856d;font:11px var(--typewriter)}
+.upgrade-detail-meta{color:#665c43;font:11px var(--typewriter);margin:5px 0 18px}
+.approved-comments{display:grid;gap:10px;margin:12px 0 22px}
+.public-comment{background:#eee6d2;border-left:4px solid #8a8d55;padding:11px 14px}
+.public-comment b{font:14px var(--typewriter);color:#29251a}
+.public-comment small{float:right;color:#8c8169;font:10px var(--typewriter)}
+.public-comment p{margin:7px 0 0;color:#474130;font:13px var(--typewriter);white-space:pre-wrap}
+.comment-form{display:grid;gap:10px;padding:18px;background:#c6b8a6;border:2px dashed #6d5d4b;color:#282116}
+.comment-form>b{font:18px var(--typewriter)}
+.comment-form label{display:grid;gap:5px;font:11px var(--typewriter);color:#45372d}
+.comment-form input,.comment-form textarea{background:#f0e7d3;border:2px solid #7a6b56;color:#252015;padding:10px;font:13px var(--typewriter);width:100%}
+.comment-form textarea{min-height:90px}
+.comment-form small{color:#665942;font:10px var(--typewriter)}
+.comment-form .trap{display:none!important}
+#pane-discussion .admin-row{align-items:flex-start}
+@media(max-width:700px){.mods-grid{grid-template-columns:1fr}.mods-intro{margin-inline:0;align-items:flex-start;padding:18px}.mods-stamp{min-width:70px;height:70px;font-size:11px}.upgrade-card:nth-child(n){transform:none}}
+
 </style>
 </head>
 <body>
@@ -120,7 +163,7 @@ footer{font-family:var(--typewriter);font-size:10px;letter-spacing:0}
 </div></section>
 
 <section class="section mods-section" id="upgrades"><div class="wrap">
-<div class="section-head"><div><div class="eyebrow">02 / THE BACK OF THE NOTEBOOK</div><h2>THE TINKER <i>BENCH</i></h2></div><p class="subcopy">Got an idea for a grow upgrade? Better airflow, different lights, new kit, a weird experiment? Chuck it on the bench and let's pull it apart.</p></div>
+<div class="section-head"><div><div class="eyebrow">02 / THE BACK OF THE NOTEBOOK</div><h2>THE TINKER <i>BENCH</i></h2></div><p class="subcopy">Got an idea for a grow upgrade? Better airflow, different lights, new kit, a weird experiment? Open an idea below and leave a note in the back-and-forth. We’ll kick it around before anything gets changed.</p></div>
 <div class="mods-intro"><div class="mods-stamp">IDEAS<br>WELCOME<br>✳</div><div><strong>NOT EVERY IDEA MAKES IT INTO THE GROW.</strong><p>We can kick ideas around first, figure out what they might improve, what they'll cost, and whether they're worth testing. Public suggestions land in a little approval queue before they appear here.</p></div></div>
 <div class="mods-grid" id="upgradeGrid"><div class="empty-state"><strong>Bench is clear.</strong>First upgrade ideas will show up here when we put them up for discussion.</div></div>
 </div></section>
