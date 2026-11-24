@@ -7,6 +7,7 @@ Crow Nest is a separate public grow journal for Seedspiracy. It has a relaxed, e
 - Published field notes with filters for watering, feeding, lighting and observations.
 - Longer Underground posts for gear notes, experiments, behind-the-scenes and lessons learned.
 - Featured YouTube videos embedded on the site.
+- The Tinker Bench for grow upgrade ideas, status tracking and moderated discussion.
 - Direct links to the complete SeedSpiracy YouTube library: videos, Shorts, livestreams and playlists.
 - Visitors do not need accounts.
 
@@ -22,7 +23,7 @@ Items are saved as drafts until “Publish this” is checked. Publishing update
 ## Important: finish the one-time cloud connection
 The front end and database policies are prepared, but **shared posting is not live until Supabase is connected**. The browser-only/localStorage demo has been removed to avoid pretending an edit is visible to everyone when it is not.
 
-Follow SETUP.md. You will need a Supabase project, then the project URL and public publishable/anon key. The key is designed to be used in a browser; never use a service_role or secret key in config.js.
+Follow SETUP.md. The updated SQL also includes the Tinker Bench and moderated visitor discussion. You will need a Supabase project, then the project URL and public publishable/anon key. The key is designed to be used in a browser; never use a service_role or secret key in config.js.
 
 ## Files
 - index.html — public site and admin interface.
