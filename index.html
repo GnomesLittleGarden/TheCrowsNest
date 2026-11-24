@@ -172,7 +172,7 @@ sel.innerHTML=records.grows.map(function(g){return '<option value="'+esc(g.id)+'
 if(selected)sel.value=selected;
 }
 function formObject(form){
-var o={};new FormData(form).forEach(function(v,k){if(k!=='cover_file'&&k!=='photo_file'&&k!=='is_published')o[k]=v;});
+var o={};new FormData(form).forEach(function(v,k){if(k!=='id'&&k!=='cover_file'&&k!=='photo_file'&&k!=='is_published')o[k]=v;});
 o.is_published=form.elements.is_published.checked;
 return o;
 }
